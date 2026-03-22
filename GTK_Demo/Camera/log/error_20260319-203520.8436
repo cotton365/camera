@@ -1,0 +1,22 @@
+Log file created at: 2026/03/19 20:35:20
+Running on machine: zh-virtual-machine
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E0319 20:35:20.474623  8436 U3VControl.cpp:249] WriteAddr:268435472, BulkIn error:-7
+E0319 20:35:20.475180  8436 CameraU3VBase.cpp:555] Function:SetMediaTypeSel, Code:set_pixel_format(type), Error:-52
+E0319 20:35:21.532054  8436 U3VControl.cpp:249] WriteAddr:268435552, BulkIn error:-7
+E0319 20:35:21.532188  8436 CameraU3VBase.cpp:1646] Function:SetTriggerSel, Code:set_trigger_mode(0), Error:-52
+E0319 20:35:22.560672  8436 U3VControl.cpp:249] WriteAddr:268435568, BulkIn error:-7
+E0319 20:35:22.560807  8436 CameraU3VBase.cpp:1726] Function:SetStrobeMode, Code:set_strobe_mode(iMode), Error:-52
+E0319 20:35:23.615639  8436 U3VControl.cpp:249] WriteAddr:268435584, BulkIn error:-7
+E0319 20:35:23.615754  8436 CameraU3VBase.cpp:2419] Function:SetHDFlip, Code:set_flip_ctrl(uMirrSet), Error:-52
+E0319 20:35:24.650753  8436 U3VControl.cpp:249] WriteAddr:268435820, BulkIn error:-7
+E0319 20:35:25.687938  8436 U3VControl.cpp:249] WriteAddr:268435820, BulkIn error:-7
+E0319 20:35:26.750556  8436 U3VControl.cpp:249] WriteAddr:268435508, BulkIn error:-7
+E0319 20:35:26.750664  8436 CameraU3VBase.cpp:395] Function:SetExpTime, Code:set_exposure_time((float)fExpTime), Error:-52
+E0319 20:35:27.830638  8436 U3VControl.cpp:249] WriteAddr:268435460, BulkIn error:-7
+E0319 20:35:27.830824  8436 CameraU3VBase.cpp:782] Function:PauseVideo, Code:set_acquisition_command(0), Error:-52
+E0319 20:35:29.072403  8436 U3VControl.cpp:249] WriteAddr:268435820, BulkIn error:-7
+E0319 20:35:30.114639  8436 U3VControl.cpp:101] ReadAddr:268435536, BulkIn error:-7
+E0319 20:35:30.116012  8436 CameraU3VBase.cpp:2151] Function:GetRgbGain, Code:get_rgb_gain(Val), Error:-52
+E0319 20:36:42.098479  8436 U3VControl.cpp:249] WriteAddr:268435552, BulkIn error:-7
+E0319 20:36:42.098641  8436 CameraU3VBase.cpp:1646] Function:SetTriggerSel, Code:set_trigger_mode(0), Error:-52
