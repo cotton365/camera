@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- ============================================ -->
+    <!-- 相机控制与STM32通信系统启动文件 -->
+    <!-- ============================================ -->
+
+    <!-- 相机参数 -->
+    <arg name="camera_index" default="0" doc="相机索引，0表示第一个相机"/>
+    <arg name="exposure_time" default="10000.0" doc="曝光时间（微秒）"/>
+    <arg name="gain" default="100" doc="相机增益值"/>
+
+    <!-- 串口参数 -->
+    <arg name="serial_port" default="/dev/ttyUSB0" doc="串口设备路径"/>
+    <arg name="baudrate" default="115200" doc="串口波特率"/>
+
+    <!-- 可视化选项 -->
+    <arg name="show_image" default="true" doc="是否显示图像"/>
+
+    <!-- ============================================ -->
+    <!-- 核心节点 -->
+    <!-- ============================================ -->
+
+    <!-- 相机采集节点 -->
+    <node name="camera_node" pkg="camera_control" type="camera_node" output="screen">
+        <param name="camera_index" value="$(arg camera_index)"/>
+        <param name="exposure_time" value="$(arg exposure_time)"/>
+        <param name="gain" value="$(arg gain)"/>
+    </node>
+
+    <!-- 视觉识别节点 -->
+    <node name="vision_node" pkg="camera_control" type="vision_node" output="screen">
+        <!-- 可在这里添加识别参数 -->
+    </node>
+
+    <!-- 串口通信节点 -->
+    <node name="serial_node" pkg="camera_control" type="serial_node" output="screen">
+        <param name="serial_port" value="$(arg serial_port)"/>
+        <param name="baudrate" value="$(arg baudrate)"/>
+    </node>
+
+    <!-- ============================================ -->
+    <!-- 可视化工具（可选） -->
+    <!-- ============================================ -->
+
+    <!-- 图像显示 -->
+    <node if="$(arg show_image)"
+          name="image_view"
+          pkg="image_view"
+          type="image_view"
+          respawn="false"
+          output="screen">
+        <remap from="image" to="/camera/image_raw"/>
+        <param name="autosize" value="true"/>
+    </node>
+
+</launch>
