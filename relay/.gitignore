@@ -1,0 +1,20 @@
+# 编译产物
+camera_app
+*.o
+
+# 保存的图像
+*.jpg
+*.bmp
+*.png
+
+# CMake 构建目录
+build/
+
+# 库文件（不提交实际的 .so 文件，只保留占位符）
+lib/*.so
+lib/*.so.*
+lib/*.a
+
+# 保留占位符
+!lib/.gitkeep
+!include/.gitkeep
